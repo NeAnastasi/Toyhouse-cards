@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cyber PC</title>
+
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Font Awesome icons -->
+</head>
+
+<body class="bg-dark" style="overflow-y: auto;">
+
+    <!-- #00ff00 - green neon color -->
+    <!-- #ff48d1 - pink neon color -->
+    <!-- #111111 - background color of "PC" -->
+    <!-- #222222 - the border of "PC" -->
+    <!-- If you don't want an uppercase text, but it's uppercasing(lol), find "text-uppercase" in "class" somewhere higher than text itself and delete it-->
+
+    <!-- MAIN CONTAINER - Holds the entire PC interface -->
+    <div class="d-flex justify-content-center align-items-start" style="padding-top: 50px; padding-bottom: 50px;">
+        <!-- PC OUTER FRAME - The black border around the screen -->
+        <div style="width: 90%; max-width: 700px; margin: auto;">
+            <!-- PC BODY - The main green screen area -->
+            <div style="
+                background: #111111;
+                border: 15px solid #222222;
+                border-radius: 5px;
+                box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+                position: relative;
+                min-height: 430px;
+                display: flex;
+                flex-direction: column;">
+                <!-- SCREEN CONTENT AREA - Where all the text appears -->
+                <div style="
+                    flex: 1;
+                    overflow-y: auto;
+                    padding: 15px;
+                    font-family: 'Courier New', monospace;
+                    color: #00ff00;
+                    text-shadow: 0 0 5px #00ff00;">
+                    <!-- SCREEN SELECTOR TABS - The navigation buttons at top -->
+
+                    <ul class="nav nav-tabs" style="border-bottom: 2px solid #00ff55; margin-bottom: 15px;">
+                        <li class="nav-item"><a class="nav-link text-uppercase font-weight-bold active show"
+                                data-toggle="tab" href="#screen1"
+                                style="color: #00ff55; border-color: #00ff55; background: transparent;">main</a></li>
+                        <li class="nav-item"><a class="nav-link text-uppercase font-weight-bold show" data-toggle="tab"
+                                href="#screen2"
+                                style="color: #ff48d1; border-color: #ff48d1; border-bottom: 0px; background: transparent;">bio</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-uppercase font-weight-bold show" data-toggle="tab"
+                                href="#screen3"
+                                style="color: #00ff55; border-color: #00ff55; border-bottom: 0px; background: transparent;">others</a>
+                        </li>
+                    </ul>
+                    <!-- TAB CONTENT AREAS -->
+                    <div class="tab-content">
+                        <!-- SCREEN 1 - Main profile information -->
+                        <div class="tab-pane fade active show" id="screen1">
+                            <div class="row pr-3">
+                                <div class="col-md-6 text-uppercase" style="font-size: 1.2rem;">&gt; SYSTEM
+                                    INITIALIZED
+                                    <br>&gt; USER: <span style="color: #ff48d1;">NICKNAME</span>
+                                    <br>&gt; STATUS: ONLINE
+                                </div>
+                                
+                                <!-- gif in main, change url -->
+                                <div class="col-md-6 mt-2 mt-md-0" style="
+    height: 90px;
+    background-image: url('https://i.pinimg.com/originals/43/e9/16/43e9164cfe2537bb9d6746b4d053d032.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;">
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="mt-3 pt-2 text-uppercase"
+                                style="border-top: 1px dashed #00ff55; font-size: 0.9rem;">&gt; USER_RANK: ELITE ▰▰▰▰▰
+                                <br>&gt; REPUTATION: NEUTRAL (&plusmn;0)
+                                <br>&gt; CREDITS: ฿1,024.50
+                                <br>&gt; LAST ACCESS: 2025-06-13
+                                <br>&gt; MEMORY USAGE: ████████░░ 80%
+                            </div>
+                        </div>
+                        <!-- SCREEN 2 - Character bio information -->
+                        <div class="tab-pane fade" id="screen2">
+                            <div class="row ">
+                                <div class="col-md-3 d-flex flex-column justify-content-center align-items-center align-items-md-start"
+                                    style="margin-right: -30px;">
+                                     <!-- img in bio, change url -->
+                                    <div style="
+        width: 120px;
+        height: 220px;
+        border: 2px solid #ff48d1;
+        background-image: url('https://psv4.userapi.com/s/v1/d/L0upd-tePSmVXCqhqNchlUQD3LbgelH-DcrsJAZR5viHTUVD_VZURYN3IPxZFhG6RkH79-PSd7yfSJeJMLSWmsUGRqSYC_0sRFBk1BM03HfDdG21LBrCUA/21_04.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="pt-2 text-uppercase text-center text-md-left"
+                                        style="font-size: 1.2rem; color: #ff48d1;">
+                                        > NICKNAME
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="text-uppercase" style="font-size: 1.2rem; color: #ff48d1;">&gt;
+                                        personality</div>
+                                    <div class="p-2"
+                                        style="background-color: #0000007c; font-size: 0.8rem; border-radius: 5px; height: 100px; overflow-y: auto; scrollbar-width: none; color: #ff48d1;">
+                                        [Character personality description text goes here...] Lorem ipsum dolor sit
+                                        amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                                        massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                                        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                                        sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                                        nec, vulputate eget, arcu.</div>
+                                    <div class="text-uppercase text-right"
+                                        style="font-size: 1.2rem; color: #00ff55; margin-top: 5px;">&gt; story</div>
+                                    <div class="text-right p-2"
+                                        style="background-color: #0000007c; font-size: 0.8rem; border-radius: 5px; height: 100px; overflow-y: auto; scrollbar-width: none; color: #00ff55;">
+                                        [Character backstory text goes here...] Lorem ipsum dolor sit amet, consectetuer
+                                        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                                        natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                                        quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+                                        massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                                        arcu.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SCREEN 3 - Character relationships -->
+                        <div class="tab-pane fade" id="screen3">
+                            <div class="row">
+                                <!-- Left column - Main character avatar -->
+                                <div class="col-md-3 text-center mb-3 mb-md-0 text-uppercase">
+                                    <!-- img in others, change url -->
+                                    <div style="
+        display: inline-block;
+        border: 2px solid #00ff55;
+        width: 100px;
+        height: 100px;
+        background-image: url('https://sun9-75.userapi.com/impg/QL1dl5Xi-TqnlkGoXgu6uqe8vVDA43C8_XX_dg/VCHfoCsJHxA.jpg?size=239x239&quality=95&sign=563f0e92288c0fd28a06988bb172ffa1&type=album');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;">
+                                        <br>
+                                    </div>
+                                    <div style="color: #00ff55; margin-top: 10px; font-size: 1.1rem;">&gt; NICKNAME
+                                    </div>
+                                </div>
+                                <!-- Right column - Relationship list with scroll -->
+                                <div class="col-md-8"
+                                    style="max-height: 260px; overflow-y: auto; scrollbar-width: none;">
+                                    <!-- Relationship header -->
+                                    <div class="text-uppercase"
+                                        style="color: #00ff55; border-bottom: 1px dashed #00ff55; padding-bottom: 5px; margin-bottom: 10px; position: sticky; top: 0; background: #111; z-index: 1;">
+                                        &gt; RELATIONSHIP_NETWORK</div>
+                                    <!-- Relationship entries container -->
+                                    <div>
+                                        <!-- Relationship entry 1 -->
+                                        <div class="text-uppercase" style="margin-bottom: 15px;">
+                                            <div class="d-flex align-items-center">
+                                                <!-- small img of another char in others, change url -->
+                                                <div style="width: 50px; height: 50px; border: 1px solid #ff48d1; margin-right: 10px; flex-shrink: 0;
+        background-image: url('https://psv4.userapi.com/s/v1/d/L0upd-tePSmVXCqhqNchlUQD3LbgelH-DcrsJAZR5viHTUVD_VZURYN3IPxZFhG6RkH79-PSd7yfSJeJMLSWmsUGRqSYC_0sRFBk1BM03HfDdG21LBrCUA/21_04.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;">
+                                                    <br>
+                                                </div>
+                                                <div class="text-uppercase" style="flex-grow: 1;">
+                                                    <div style="color: #00ff55; font-size: 1rem;">CYBER_CAT_042</div>
+                                                    <div style="color: #ff48d1; font-size: 0.8rem;">STATUS: <span
+                                                            style="color: #00ff55;">ALLIES</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-uppercase"
+                                                style="color: #00ff55; font-size: 0.7rem; margin-top: 5px; padding-left: 60px;">
+                                                &gt; TRUST_LEVEL: ██████░░░░ 60%</div>
+                                        </div>
+                                        <!-- Additional relationship entries would go here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- BOTTOM CONTROL PANEL - Fixed buttons at bottom -->
+                <div style="
+                    background: #00000067;
+                    border-top: 2px solid #333;
+                    color: #00ff55;
+                    padding: 10px 0;
+                    flex-shrink: 0;">
+                    <div class="d-flex justify-content-around">
+                        <div>ENG</div>
+                        <!-- Language indicator -->
+                        <i class="fas fa-solid fa-wifi pt-1"></i>
+                        <i class="fas fa-solid fa-volume-xmark pt-1"></i>
+                        <a class="fas fa-solid fa-code pt-1" href="https://toyhou.se/Infium"
+                            style="color: #00ff55;"></a>
+                        <!-- My (coder's) profile link, don't remove -->
+                    </div>
+                </div>
+            </div>
+            <!-- PC STAND - The base that holds up the television -->
+            <div style="
+                height: 30px;
+                width: 60%;
+                max-width: 300px;
+                background: linear-gradient(to right, #222, #000, #222);
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                margin: 0 auto;
+                z-index: -1;">
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>TH card</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Font Awesome icons -->
+</head>
+
+<body class="bg-dark" style="overflow-y: auto;">
+
+<!-- Цвета HEX. Везде заменяется именно # и 6 цифр/букв после. Можно выделять написанный здесь цвет, забивать его в ctrl + F и искать по коду где он использован -->
+    <!-- #3d5a7a - цвет обводки и "съеденных" полукругами частей  -->
+    <!-- #bdcfe6 - цвет пунктирного разделителя на билете, текста и других обводок -->
+    <!-- #f8e1e7 - цвет иконок у иконок на маленьких билетиках -->
+
+    <!-- Цвета RGBA, полупрозрачные. Заменять полностью от r до ), если цвет RGB (например, rgb(0, 0, 0)), нужно добавить к rgb букву a и в скобках ещё одну цифру, то есть было rgb(0, 0, 0), стало rgba(0, 0, 0, 1). Последняя цифра означает прозрачность, где 1 - полностью непрозрачный, а 0 - полностью прозрачный -->
+    <!-- rgba(61, 90, 122, 0.3) - цвет подложки для текста на билете -->
+    <!-- rgba(61, 90, 122, 0.7) - цвет свечения основных элементов (билета и билетиков) -->
+
+    <div class="container-fluid" style="max-width: 800px;">
+        <!-- менять max-width можно для того чтобы сделать всё немного длиннее -->
+
+        <div class="card" style="
+        max-width: 800px; 
+        min-height: 300px;   
+        background: url('https://i.pinimg.com/originals/0f/a1/3c/0fa13cfce56e33fa45155d56b8e70067.jpg');
+        background-size: cover;
+        background-position: center;
+        border: 3px solid #3d5a7a;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(61, 90, 122, 0.7);
+        ">
+            <div class="row card-body p-0 m-0" style="background-color: rgba(0,0,0,0.5);">
+                <!-- Левая часть start -->
+                <div class="col-8 position-relative p-md-4 p-1"
+                    style="border-right: 4px dashed #bdcfe6;">
+                    <!-- Полукруги start -->
+                    <div style="
+                    position: absolute;
+                    top: -20px;
+                    right: -22px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    border-left: 2px solid #bdcfe6;
+                    transform: rotate(-45deg);
+                    z-index: 1;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    bottom: -20px;
+                    right: -22px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    border-left: 2px solid #bdcfe6;
+                    transform: rotate(45deg);
+                    z-index: 1;
+                    "></div>
+                    <!-- Полукруги end -->
+
+                    <!-- Контент start -->
+                    <div class="w-100 h-100 text-center" style="
+                    background-color: rgba(61, 90, 122, 0.3);
+                    border-radius: 10px;
+                    padding: 20px;
+                    border: 1px solid #bdcfe6;
+                    ">
+                        <div class="mb-2 d-flex align-items-center justify-content-center" style="
+                        color: #bdcfe6;
+                        font-size: 30px;
+                        text-shadow: 0 0 5px #3d5a7a;
+                        ">
+                            <i class="fas fa-moon mr-1"></i>
+                            <img src="https://i.postimg.cc/T3tfbJb9/1750490877.png" class="m-0 p-0" style="height: 55px;"/> 
+                            <i class="fas fa-moon ml-1"></i>
+                        </div>
+
+                        <div style="
+                        color: #bdcfe6;
+                        font-family: Georgia, serif;
+                        font-style: italic;
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                        ">
+                            <div class="row pb-3 pt-3 mr-1 ml-1"
+                                style="border-bottom: 1px solid #bdcfe6; border-top: 1px solid #bdcfe6;">
+                                <div class="col-md-4 mb-md-0 mb-2">Hello! It’s Neirmuris! Welcome to my Toyhouse.
+                                     <!-- текст первой секции --> </div>
+                                <div class="col-md-4 mb-md-0 mb-2">Here I post about my characters and their silly stories.
+                                     <!-- текст второй секции --> </div>
+                                <div class="col-md-4 mb-md-0 mb-2">I don't post very often, but I am still here
+                                     <!-- текст третьей секции --> </div>
+                            </div>
+                            <div class="pt-3">"No. This is somewhere to be. This is all you have, but it's still something. Streets and sodium lights. The sky, the world. You're still alive." <!-- самый нижний текст --></div>
+                        </div>
+                    </div>
+                    <!-- Контент end -->
+                </div>
+                <!-- Левая часть end -->
+
+                <!-- Правая колонка start -->
+                <div class="col-4 p-md-4 p-1 d-flex align-items-center">
+                    <div class="w-100 h-100 position-relative" style="
+                    background-image: url('https://f2.toyhou.se/file/f2-toyhou-se/images/102298743_2qDe1VPH71VxDPd.png');
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 8px;
+                    border: 1px solid #f8e1e7;
+                    box-shadow: 0 0 15px rgba(189, 207, 230, 0.5);
+                    ">
+                    </div>
+                </div>
+                <!-- Правая колонка end -->
+            </div>
+
+        </div>
+
+        <!-- Строка первая (2 карточки) start -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Карточка первая (likes) start -->
+                <div class="card position-relative mt-3 w-100" style="
+                min-height: 150px;
+                background: #010e1a;
+                border: 3px solid #3d5a7a;
+                border-radius: 0;
+                overflow: hidden;
+                padding: 20px;
+                border-radius: 3px;
+                box-shadow: 0 0 20px rgba(61, 90, 122, 0.7);
+                ">
+                    <!-- Полукруги на углах start -->
+                    <div style="
+                    position: absolute;
+                    top: -15px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    top: -15px;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    bottom: -15px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    bottom: -15px;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+                    <!-- Полукруги на углах end -->
+
+                    <!-- Контент карточки -->
+                    <div class="h-100 d-flex" style="
+                    border: 1px dashed #bdcfe6;
+                    border-radius: 10px;
+                    background: rgba(61, 90, 122, 0.2);
+                    ">
+                        <!-- Левая часть с заголовком start -->
+                        <div class="d-flex flex-column justify-content-center align-items-center px-2" style="
+                        width: 80px;
+                        border-right: 1px dashed #bdcfe6;
+                        ">
+                            <span style="
+                            transform: rotate(270deg);
+                            color: #bdcfe6;
+                            font-size: 17px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        ">
+                                likes
+                            </span>
+                        </div>
+                        <!-- Левая часть с заголовком end -->
+
+                        <!-- Правая часть с текстом-списком start -->
+                        <div class="flex-grow-1 d-flex align-items-center" style="
+                        padding-left: 15px;
+                        font-size: 13px;
+                        ">
+                            <ul style="
+                            color: #bdcfe6;
+                            font-family: Georgia, serif;
+                            list-style: none;
+                            padding-left: 5px;
+                            margin-top: 15px;
+                            ">
+                                <!-- Элементы списка с иконками -->
+                                <!-- Вставлять новые пункты списка лучше сюда, наверх, не вниз -->
+                                <!-- Вставлять: 
+                                <li class="mb-1">
+                                    <i class="fas fa-heart mr-2" style="color: #f8e1e7;"></i>
+                                    Like
+                                </li> -->
+                                <li class="mb-1">
+                                    <i class="fas fa-heart mr-2" style="color: #f8e1e7;"></i>
+                                    Coffee <!-- Сюда вписывать пункт любимого, далее аналогично -->
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-heart mr-2" style="color: #f8e1e7;"></i>
+                                    Sea
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-heart mr-2" style="color: #f8e1e7;"></i>
+                                    Wordbuilding
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-heart mr-2" style="color: #f8e1e7;"></i>
+                                    My friends 
+                                </li>
+                                <li>
+                                    <i class="fas fa-heart mr-2" style="color: #f8e1e7;"></i>
+                                    Reading 
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Правая часть с текстом-списком end -->
+                    </div>
+                </div>
+                <!-- Карточка первая (likes) end -->
+            </div>
+            <div class="col-md-6">
+                <!-- Карточка вторая (dislikes) start -->
+                <div class="card position-relative mt-3 w-100" style="
+                    min-height: 150px;
+                    background: #010e1a;
+                    border: 3px solid #3d5a7a;
+                    border-radius: 0;
+                    overflow: hidden;
+                    padding: 20px;
+                    border-radius: 3px;
+                    box-shadow: 0 0 20px rgba(61, 90, 122, 0.7);
+                    ">
+                    <!-- Полукруги на углах start -->
+                    <div style="
+                    position: absolute;
+                    top: -15px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    top: -15px;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    bottom: -15px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    bottom: -15px;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+                    <!-- Полукруги на углах end -->
+
+                    <!-- Контент карточки -->
+                    <div class="h-100 d-flex" style="
+                    border: 1px dashed #bdcfe6;
+                    border-radius: 10px;
+                    background: rgba(61, 90, 122, 0.2);
+                    ">
+                        <!-- Левая часть с заголовком start -->
+                        <div class="d-flex flex-column justify-content-center align-items-center px-2" style="
+                        width: 80px;
+                        border-right: 1px dashed #bdcfe6;
+                        ">
+                            <span style="
+                            transform: rotate(270deg);
+                            color: #bdcfe6;
+                            font-size: 17px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        ">
+                                dislikes
+                            </span>
+                        </div>
+                        <!-- Левая часть с заголовком end -->
+
+                        <!-- Правая часть с текстом-списком start -->
+                        <div class="flex-grow-1 d-flex align-items-center" style="
+                        padding-left: 15px;
+                        font-size: 13px;
+                        ">
+                            <ul style="
+                            color: #bdcfe6;
+                            font-family: Georgia, serif;
+                            list-style: none;
+                            padding-left: 5px;
+                            margin-top: 15px;
+                            ">
+                                <!-- Элементы списка с иконками -->
+                                <!-- Вставлять новые пункты списка лучше сюда, наверх, не вниз -->
+                                <!-- Вставлять: 
+                                <li class="mb-1">
+                                    <i class="fas fa-heart-broken mr-2" style="color: #f8e1e7;"></i>
+                                    Disike
+                                </li> -->
+                                <li class="mb-1">
+                                    <i class="fas fa-heart-broken mr-2"
+                                        style="color: #f8e1e7;"></i>
+                                    Crowds <!-- Сюда вписывать пункт нелюбимого, далее аналогично -->
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-heart-broken mr-2" style="color: #f8e1e7;"></i>
+                                    Small talk
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-heart-broken mr-2" style="color: #f8e1e7;"></i>
+                                    Shopping
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-heart-broken mr-2" style="color: #f8e1e7;"></i>
+                                    Meaningless tasks
+                                </li>
+                                <li>
+                                    <i class="fas fa-heart-broken mr-2" style="color: #f8e1e7;"></i>
+                                    Onions
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Правая часть с текстом-списком end -->
+                    </div>
+                </div>
+                <!-- Карточка вторая (dislikes) end -->
+            </div>
+        </div>
+        <!-- Строка первая (2 карточки) end -->
+
+        <!-- Строка вторая (2 карточки) start -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Карточка первая -->
+                <div class="card position-relative mt-3 w-100" style="
+                min-height: 150px;
+                background: #010e1a;
+                border: 3px solid #3d5a7a;
+                border-radius: 0;
+                overflow: hidden;
+                padding: 20px;
+                border-radius: 3px;
+                box-shadow: 0 0 20px rgba(61, 90, 122, 0.7);
+                ">
+                    <!-- Полукруги на углах start -->
+                    <div style="
+                    position: absolute;
+                    top: -15px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%; 
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    top: -15px;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    bottom: -15px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    bottom: -15px;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+                    <!-- Полукруги на углах end -->
+
+                    <!-- Контент карточки -->
+                    <div class="h-100 d-flex" style="
+                    border: 1px dashed #bdcfe6;
+                    border-radius: 10px;
+                    background: rgba(61, 90, 122, 0.2);
+                    ">
+                        <!-- Левая часть с заголовком start -->
+                        <div class="d-flex flex-column justify-content-center align-items-center px-2" style="
+                        width: 80px;
+                        border-right: 1px dashed #bdcfe6;
+                        ">
+                            <span style="
+                            transform: rotate(270deg);
+                            color: #bdcfe6;
+                            font-size: 17px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        ">
+                                trivia
+                            </span>
+                        </div>
+                        <!-- Левая часть с заголовком end -->
+
+                        <!-- Правая часть с текстом-списком start -->
+                        <div class="flex-grow-1 d-flex align-items-center" style="
+                        padding-left: 15px;
+                        font-size: 13px;
+                        ">
+                            <ul style="
+                            color: #bdcfe6;
+                            font-family: Georgia, serif;
+                            list-style: none;
+                            padding-left: 5px;
+                            margin-top: 15px;
+                            ">
+                                <!-- Элементы списка с иконками -->
+                                <!-- <li class="mb-1">
+                                    <i class="fas fa-fish mr-2" style="color: #f8e1e7;"></i>
+                                    Trivia
+                                </li> -->
+                                <li class="mb-1">
+                                    <i class="fas fa-fish mr-2" style="color: #f8e1e7;"></i>
+                                    English is not my first language <!-- Сюда вписывать мелочь, далее аналогично -->
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-fish mr-2" style="color: #f8e1e7;"></i>
+                                    Merch enthusiast
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-fish mr-2" style="color: #f8e1e7;"></i>
+                                    Insane lore enjoyer
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-fish mr-2" style="color: #f8e1e7;"></i>
+                                    Seashell collector
+                                </li>
+                                <li>
+                                    <i class="fas fa-fish mr-2" style="color: #f8e1e7;"></i>
+                                    Some of the characters are shared with my best friend M.
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Правая часть с текстом-списком end -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card position-relative mt-3 w-100" style="
+                min-height: 150px;
+                background: #010e1a;
+                border: 3px solid #3d5a7a;
+                border-radius: 0;
+                overflow: hidden;
+                padding: 20px;
+                border-radius: 3px;
+                box-shadow: 0 0 20px rgba(61, 90, 122, 0.7);
+                ">
+                    <!-- Полукруги на углах start -->
+                    <div style="
+                    position: absolute;
+                    top: -15px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    top: -15px;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    bottom: -15px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+
+                    <div style="
+                    position: absolute;
+                    bottom: -15px;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #3d5a7a;
+                    "></div>
+                    <!-- Полукруги на углах end -->
+
+                    <!-- Контент карточки -->
+                    <div class="h-100 d-flex" style="
+                    border: 1px dashed #bdcfe6;
+                    border-radius: 10px;
+                    background: rgba(61, 90, 122, 0.2);
+                    ">
+                        <!-- Левая часть с заголовком start -->
+                        <div class="d-flex flex-column justify-content-center align-items-center px-2" style="
+                        width: 80px;
+                        border-right: 1px dashed #bdcfe6;
+                        ">
+                            <span style="
+                            transform: rotate(270deg);
+                            color: #bdcfe6;
+                            font-size: 17px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        ">
+                                rules
+                            </span>
+                        </div>
+                        <!-- Левая часть с заголовком end -->
+
+                        <!-- Правая часть с текстом-списком start -->
+                        <div class="flex-grow-1 d-flex align-items-center" style="
+                        padding-left: 15px;
+                        font-size: 13px;
+                        ">
+                            <ul style="
+                            color: #bdcfe6;
+                            font-family: Georgia, serif;
+                            list-style: none;
+                            padding-left: 5px;
+                            margin-top: 15px;
+                            ">
+                                <!-- Элементы списка с иконками -->
+                                <!--<li class="mb-1">
+                                    <i class="fas fa-scroll mr-2" style="color: #f8e1e7;"></i>
+                                    Rule
+                                </li>-->
+                                <li class="mb-1">
+                                    <i class="fas fa-scroll mr-2" style="color: #f8e1e7;"></i>
+                                    DO NOT STEAL MY CHARACTERS!
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-scroll mr-2" style="color: #f8e1e7;"></i>
+                                    No Politics or Political Discussions/Commentary! 
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-scroll mr-2" style="color: #f8e1e7;"></i>
+                                    I can ban you with no explanation
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-scroll mr-2" style="color: #f8e1e7;"></i>
+                                    DO NOT reupload the arts
+                                </li>
+                                <li>
+                                    <i class="fas fa-scroll mr-2" style="color: #f8e1e7;"></i>
+                                    DO NOT use my characterfor for ai training
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Правая часть с текстом-списком end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Строка вторая (2 карточки) end -->
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
